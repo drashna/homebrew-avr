@@ -10,13 +10,6 @@ class AvrGccAT13 < Formula
 
   head "https://gcc.gnu.org/git/gcc.git", branch: "master"
 
-  bottle do
-    root_url "https://github.com/drashna/homebrew-avr/releases/download/avr-gcc@13-13.2.0"
-    sha256 ventura:  "8bbdd19dc3a9e3774ec9e7e373c5f61369bcc54233129a3abfbe096b4962a1c9"
-    sha256 monterey: "47625683110b51738d9436fc547d74332d8a1f7cd53ca690307ae30ce706ab15"
-    sha256 big_sur:  "057902f378d287557d49500d7fdcc9ebaffc62ec485432721476cb6a136a2599"
-  end
-
   # The bottles are built on systems with the CLT installed, and do not work
   # out of the box on Xcode-only systems due to an incorrect sysroot.
   pour_bottle? only_if: :clt_installed
